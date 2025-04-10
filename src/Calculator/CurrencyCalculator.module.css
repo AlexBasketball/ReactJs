@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.currency {
+  margin-right: 15px;
+  padding: 5px;
+  font-size: 28px;
+  text-align: center;
+  border: 1px solid rgb(43, 39, 58);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.active {
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 28px;
+  text-align: center;
+  background-color: rgb(43, 39, 58);
+  color: #fcfcee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.currency:hover {
+  background-color: rgb(43, 39, 58);
+  color: #fcfcee;
+}
+
+.currency:not(:last-child) {
+  margin-right: 5px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+  min-height: 120px;
+  height: 100%;
+  text-align: center;
+  font-size: 32px;
+  background-color: #fcfcee;
+  border: 1px solid rgb(43, 39, 58);
+  border-radius: 5px;
+}
+
+@media (min-width: 620px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .block:not(:last-child) {
+    margin-right: 15px;
+  }
+}

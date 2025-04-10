@@ -1,0 +1,63 @@
+.quizBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(43, 39, 58);
+  border-radius: 20px;
+}
+
+.progressBar {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid rgb(43, 39, 58);
+  border-radius: 20px;
+}
+
+.progress {
+  display: flex;
+  padding: 3px;
+  background-color: rgb(43, 39, 58);
+  border: 2px solid rgb(43, 39, 58);
+  border-radius: 20px;
+  width: 0;
+  transition: width 0.3s ease-out;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.answer {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid rgb(43, 39, 58);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.answer:hover {
+  background-color: rgb(43, 39, 58);
+  color: #fcfcee;
+}

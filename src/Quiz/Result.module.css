@@ -1,0 +1,25 @@
+.congrats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(43, 39, 58);
+  border-radius: 20px;
+}
+
+.img {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.text {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+}

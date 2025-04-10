@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #444;
+}
+
+.headerBurgerWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 68, 68, 0.7);
+  transform: translateX(-130%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.burgerModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #444;
+  transform: translateX(-130%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.burgerList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.nav {
+  display: none;
+}
+
+.burgerBtn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: transparent;
+  z-index: 100;
+}
+
+.burgerBtn:hover {
+  background-color: transparent;
+}
+
+.burgerStick {
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background-color: #fcfcee;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.burgerBtn:active .burgerStick {
+  opacity: 0.7;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.middleStickTransform {
+  transform: scale(0);
+}
+
+.topStickTransform {
+  transform: rotate(45deg) translate(11px, 7px);
+}
+
+.bottomStickTransform {
+  transform: rotate(-45deg) translate(10px, -7px);
+}
+
+.link {
+  color: #fcfcee;
+  font-size: 22px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
+.link:not(:last-child) {
+  margin-right: 15px;
+}
+
+@media (min-width: 620px) {
+  .header {
+    justify-content: center;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .burgerModal {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: none;
+  }
+}
