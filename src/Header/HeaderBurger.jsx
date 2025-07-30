@@ -60,17 +60,6 @@ const HeaderBurger = ({ isOpen, setIsOpen, showBurgerMenu }) => {
                 Users
               </Link>
             </li>
-            <li className={styles.burgerItem}>
-              <Link
-                className={styles.link}
-                to="/currencycalculator"
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-              >
-                Currency
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

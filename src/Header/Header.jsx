@@ -4,7 +4,6 @@ import Counter from "../Counter/Counter";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import Quiz from "../Quiz/Quiz";
 import UsersBlock from "../Users/UsersBlock";
-import CurrencyCalculator from "../Calculator/CurrencyCalculator";
 import styles from "./Header.module.css";
 import { useState } from "react";
 
@@ -50,9 +49,6 @@ const Header = () => {
           <Link className={styles.link} to="/users">
             Users
           </Link>
-          <Link className={styles.link} to="/currencycalculator">
-            Currency
-          </Link>
         </nav>
       </header>
       <Routes>
@@ -60,7 +56,6 @@ const Header = () => {
         <Route path="/modalwindow" element={<ModalWindow />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/users" element={<UsersBlock />} />
-        <Route path="/currencycalculator" element={<CurrencyCalculator />} />
       </Routes>
     </>
   );

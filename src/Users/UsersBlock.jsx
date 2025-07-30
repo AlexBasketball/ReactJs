@@ -13,11 +13,10 @@ const UsersBlock = () => {
   const [success, setSuccess] = useState(false);
 
   async function getData() {
-    const res = await fetch("https://reqres.in/api/users");
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
     try {
       const item = await res.json();
-      const data = await item.data;
-      return setUsers(data);
+      return setUsers(item);
     } catch (err) {
       console.log(err);
       alert("Ошибка при получении пользоваеля");
@@ -73,11 +72,8 @@ const UsersBlock = () => {
               <ul className={styles.usersList}>
                 {users
                   .filter((obj) => {
-                    const fullname = (
-                      obj.first_name + obj.last_name
-                    ).toLowerCase();
                     return (
-                      fullname.includes(search.toLowerCase()) ||
+                      obj.name.toLowerCase().includes(search.toLowerCase()) ||
                       obj.email.toLowerCase().includes(search.toLowerCase())
                     );
                   })

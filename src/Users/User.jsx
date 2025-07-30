@@ -2,22 +2,11 @@ import styles from "./Users.module.css";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 
-const User = ({
-  id,
-  email,
-  first_name,
-  last_name,
-  avatar,
-  isInvited,
-  handleInvite,
-}) => {
+const User = ({ id, email, name, isInvited, handleInvite }) => {
   return (
     <div className={styles.user}>
-      <img className={styles.avatar} src={avatar}></img>
       <ul className={styles.list}>
-        <li className={styles.name}>
-          {first_name} {last_name}
-        </li>
+        <li className={styles.name}>{name}</li>
         <li className={styles.email}>{email}</li>
       </ul>
       {isInvited ? (
